@@ -1,0 +1,38 @@
+{
+  "title": "Tarificación Simple y Transparente",
+  "subTitle": "Aumente la eficiencia con los planes claros y basados ​​en valores de Motormecanic.",
+  "badge": "Mejor Valor",
+  "thirdOption": "¿Necesitas una Solución?",
+  "btnText": "Contacta ahora mismo",
+
+  "starterKit": {
+    "name": "Cambio de Neumáticos",
+    "description": "Cambiamos cualquier tipo de neumaticos",
+    "price": "00",
+    "cents": ".00€",
+    "billingFrequency": "Euros",
+    "features": [
+      "Cambio de neumáticos",
+      "Equilibrado",
+      "Alineado dirección"
+    ],
+    "purchaseBtnTitle": "¡Cambia tus neumaticos con nosotros!",
+    "purchaseLink": "/contact"
+  },
+
+  "professionalToolbox": {
+    "name": "Mantenimiento de tu vehículo",
+    "description": "Hacemos un mantenimiento de tu vehículo",
+    "price": "00",
+    "cents": ".00€",
+    "billingFrequency": "Euros",
+    "features": [
+      "Cambio de aceite",
+      "Revision de pastillas",
+      "Revision de líquidos",
+      "Revision de neumáticos"
+    ],
+    "purchaseBtnTitle": "¡Revisa tu vehículo con nosotros!",
+    "purchaseLink": "/contact"
+  }
+}

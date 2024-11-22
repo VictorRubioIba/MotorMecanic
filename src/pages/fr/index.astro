@@ -1,0 +1,146 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import heroImage from "@images/logosinfondo.png";
+import faqs from "@data/fr/faqs.json";
+import features from "@data/fr/features.json";
+import pricing from "@data/fr/pricing.json";
+import featureImage from "@images/Taller_3.png";
+import construction from "@images/Taller_16.png";
+import tools from "@images/Taller_1.png";
+import dashboard from "@images/Taller_9.png";
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout lang="fr">
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Contacta con nosotros"
+    url="/contact"
+  />
+
+  <HeroSection
+    title=`Taller mecánico <span class="text-yellow-500 dark:text-yellow-400">Motormecanic</span>`
+    subTitle="Taller especializado en mecanica en general, con mas de 30 años de experiencia. Bienvenido a tu taller mecánico en Pamplona. Contamos con los mejores servicios para tu vehículo."
+    primaryBtn="Comienza a explorar"
+    primaryBtnURL={getRelativeLocaleUrl("fr", "products")}
+    secondaryBtn="Contacta con nosotros"
+    secondaryBtnURL={getRelativeLocaleUrl("fr", "contact")}
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    
+    src={heroImage}
+    alt="Taller mecánico"
+  />
+
+  <ClientsSection
+    title="Trabajamos con las mejores marcas en el mundo"
+    subTitle=""
+  />
+
+  <FeaturesGeneral
+    title="Cumplimos con las necesidades de los talleres mecánicos"
+    subTitle="En Motormecanic, entendemos los desafíos específicos que enfrenta el sector de la mecánica automotriz. Desde herramientas especializadas de alto rendimiento hasta asesoramiento técnico experto, estamos dedicados a ayudar a su taller a superar cualquier obstáculo y alcanzar sus metas con eficiencia y precisión."
+    src={featureImage}
+    alt="Produits ScrewFast dans des boîtes flottantes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`Cumplimos con las necesidades de los  <span class="text-yellow-500 dark:text-yellow-400">talleres mecánicos</span> .`
+    tabs={[
+      {
+        heading: "Mecánica en general",
+        content:
+          "En Motor Mecanic, somos expertos en ofrecer soluciones completas para todas tus necesidades de mecánica en general. Nuestro equipo de técnicos altamente capacitados está comprometido con el servicio de calidad, brindando atención personalizada y soluciones a medida para que tu vehículo siempre funcione a la perfección. Ya sea que necesites un simple cambio de aceite o una reparación mayor, en Motor Mecanic estamos aquí para ayudarte",
+        svg: "tools",
+        src: tools,
+        alt: "",
+        first: true,
+      },
+      {
+        heading: "Mantenimientos",
+        content:
+          "Mantener tu vehículo en perfectas condiciones es esencial para tu seguridad y la longevidad de tu coche. En Motor Mecanic, ofrecemos servicios de mantenimiento diseñados para que tu vehículo siempre esté en su mejor forma, sin importar su antigüedad o marca.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "",
+        second: true,
+      },
+      {
+        heading: "Cambios de Neumáticos",
+        content:
+          "Los neumáticos son uno de los componentes más importantes para la seguridad y el rendimiento de tu vehículo. En Motor Mecanic, sabemos que elegir el neumático adecuado y asegurarse de que esté instalado correctamente es crucial para tu tranquilidad en la carretera.Ofrecemos servicios completos de cambio de neumáticos.",
+        svg: "house",
+        src: construction,
+        alt: "",
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Repara tu vehículo con seguridad"
+    subTitle="En Motor Mecanic, entendemos la importancia de mantener tu vehículo en perfectas condiciones para su seguridad y rendimiento. De ahí tenemos unos comentarios de nuestros clientes:"
+    testimonials={[
+      {
+        content:
+          " Llevo dos años llevando el coche ante temas de electricidad y mi padre unos diez años. Siempre han demostrado ser transparentes, eficaces, profesionales y honestos. Nunca nos hemos llevado ninguna sorpresa, lo cual es bastante decir en favor de un taller",
+        author: "Martín Ruiz",
+        role: "",
+        avatarSrc: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+          
+      },
+      
+    ]}
+    statistics={[
+      {
+        count: "Siscu Simon",
+        description:
+          "David un crack. Mecánico de confianza y mejor persona. Siempre sincero con todo lo que hace y propone. Puedes estar tranquilo si llevas tu coche allá",
+      },
+      {
+        count: "Isidro 31",
+        description:
+          "De los mejores talleres de Pamplona, trato estupendo por parte de David y su equipo, grandes profesionales, siempre tienen una solución a nuestros problemas mecanicos, electricos etc. .Son muchs años llevando mis vehículos y los de mis familiares y amigos y todos encantados.",
+      },
+      {
+        count: "Ruben Ruiz",
+        description:
+          "Llevo mis coches allí desde hace años y siempre han sido rápidos y sin problemas. Da gusto ver cómo trabajan, honestos y transparentes , mirando por el cliente.",
+      },
+      {
+        count: "Borja Celaya",
+        description:
+          "Lleve el coche para hacer una reparación mecánica bastante importante y la verdad que he quedado encantado. Se nota que saben de lo que hablan y saben mucho de mecánica. Muy cuidadosos.Muy recomendable",
+      },
+    ]}
+  />
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Contacta con Nosotros"
+    subTitle="Para cualquier consulta, sugerencia o colaboración, no dudes en contactarnos."
+    url="contact"
+  />
+</MainLayout>

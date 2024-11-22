@@ -1,0 +1,39 @@
+{
+  "title": "Simple and Transparent Pricing",
+  "subTitle": "Increase efficiency with clear, value-based plans from Motormecanic.",
+  "badge": "Best value",
+  "thirdOption": "Do you need a Solution?",
+  "btnText": "Contact",
+
+  "starterKit": {
+    "name": "Tire Change",
+    "description": "We change any type of tires",
+    "price": "00",
+    "cents": ".00€",
+    "billingFrequency": "Euros",
+    "features": [
+      "Change of tires",
+      "Balance",
+      "Alignment"
+      
+    ],
+    "purchaseBtnTitle": "¡Change your tires with us!",
+    "purchaseLink": "/contact"
+  },
+
+  "professionalToolbox": {
+    "name": "Mantenice of your vehicle",
+    "description": "We maintain your vehicle",
+    "price": "00",
+    "cents": ".00€",
+    "billingFrequency": "Euros",
+    "features": [
+      "Oil change",
+      "Brake fluid",
+      "Tire pressure",
+      "Liquid check"
+    ],
+    "purchaseBtnTitle": "Check your vehicle with us!",
+    "purchaseLink": "/contact"
+  }
+}
