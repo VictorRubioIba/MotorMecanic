@@ -2,7 +2,7 @@
 title: "Optimisation de l'efficacité avec les outils de pointe de ScrewFast"
 description: "Innovation de l'efficacité de la construction avec des outils de précision et un soutien."
 author: "Jacob"
-authorImage: "@/images/blog/jacob.avif"
+authorImage: "@/images/Taller_1.png"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-06
 cardImage: "@/images/blog/post-1.avif"
