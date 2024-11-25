@@ -5,9 +5,9 @@ main:
   id: 4
   content: |
     Introducing the SF-FN F303 Hex Bolts – the perfect choice for heavy-duty fastening applications. Crafted with precision and durability in mind, these hex bolts provide the strength and reliability you need for your toughest projects.
-  imgCard: "@/images/product-image-4.avif"
-  imgMain: "@/images/product-image-main-4.avif"
-  imgAlt: "Mockup boxes of hex bolts"
+  imgCard: "@/images/michelin.png"
+  imgMain: "@/images/michelin.png"
+  imgAlt: ""
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -50,6 +50,6 @@ specificationsRight:
   - title: "Applications"
     subTitle: "Ideal for use in construction, machinery, automotive, and other heavy-duty applications that demand strong and reliable fastening."
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"  
+  first: "@/images/michelin.png"
+  second: "@/images/michelin.png"
 ---

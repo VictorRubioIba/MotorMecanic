@@ -9,11 +9,11 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Contact";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
-const formTitle: string = "Fill in the form below";
-const formSubTitle: string = "We'll get back to you in 1-2 business days.";
+  "Contact us to arrange an appointment.";
+const formTitle: string = "Fill out the form";
+const formSubTitle: string = "We will reply to you as soon as possible.";
 ---
 
 <!-- Contact Us -->
@@ -76,6 +76,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        <!--
         <ContactIconBlock
           heading="Knowledgebase"
           content="Browse through all of our knowledgebase articles."
@@ -95,20 +96,20 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
           isArrowVisible={true}
           ><Icon name="chatBubble" />
         </ContactIconBlock>
-
+          -->
         <ContactIconBlock
-          heading="Visit our office"
-          content="UK ScrewFast"
+          heading="Visit us"
+          content=""
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Travesía Monasterio de Irache 1, 31001 Pamplona"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
         <ContactIconBlock
           heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          content="Contact us to arrange an appointment."
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
+          linkTitle="motormecanic@gmail.com"
           linkURL="#"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>

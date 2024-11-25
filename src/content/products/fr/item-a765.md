@@ -6,7 +6,7 @@ main:
   content: |
     Découvrez l'ensemble de vis assorties SF-AB A765 – la solution ultime pour vos besoins de fixation. Ce set complet comprend une grande variété de vis soigneusement sélectionnées pour aborder divers projets avec facilité et précision.
   imgCard: "@/images/castrol.png"
-  imgMain: "@/images/product-image-main-2.avif"
+  imgMain: "@/images/castrol.png"
   imgAlt: ""
 tabs:
   - id: "tabs-with-card-item-1"
@@ -49,6 +49,6 @@ tableData:
       - ["Finition", "Assortie"]
       - ["Contenu du Pack", "Diverses vis dans un ensemble"]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/castrol.png"
+  second: "@/images/castrol.png"
 ---

@@ -7,14 +7,14 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
-import underConstruction from "@images/under-construction.avif";
+import blueprints from "@images/Taller_1.png";
+import personWorking from "@images/Taller_3.png";
+import beforeAfter from "@images/Taller_4.png";
+import constructionWorkers from "@images/Taller_16.png";
+import aerialView from "@images/Taller_15.png";
+import usingTools from "@images/Taller_10.png";
+import progressBuilding from "@images/Taller_9.png";
+import underConstruction from "@images/Taller_11.png";
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -36,58 +36,58 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "General mechanics",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "At Motor Mecanic, we are experts in offering complete solutions for all your general mechanical needs. Our team of highly trained technicians is committed to quality service, providing personalized attention and tailored solutions so your vehicle always works perfectly. Whether you need a simple oil change or a major repair, at Motor Mecanic we are here to help.",
     single: false,
     imgOne: blueprints,
-    imgOneAlt: "Blueprints and digital tablet with construction plans.",
+    imgOneAlt: "",
     imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+    imgTwoAlt: "",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Maintenance",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
+      "Keeping your vehicle in perfect condition is essential for your safety and the longevity of your car. At Motor Mecanic, we offer maintenance services designed to keep your vehicle always in its best shape, regardless of its age or make.",
     img: beforeAfter,
-    imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
+    imgAlt: "",
+    btnExists: false,
+    btnTitle: "",
     btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "Tire Changes",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "Tires are one of the most important components for the safety and performance of your vehicle. At Motor Mecanic, we know that choosing the right tire and ensuring it is installed correctly is crucial to your peace of mind on the road. We offer complete tire repair services. tire change.",
     single: false,
     imgOne: constructionWorkers,
-    imgOneAlt: "Construction workers orchestrating a project",
+    imgOneAlt: "",
     imgTwo: aerialView,
-    imgTwoAlt: "Aerial view of managed construction",
+    imgTwoAlt: "",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "Suspensions",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
+      "At Motor Mecanic, we understand that good suspension is key to your safety and comfort behind the wheel. That's why we offer a complete suspension service to ensure your vehicle drives smoothly and safely, regardless of road conditions.",
     img: usingTools,
     imgAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title: "Pre ITV y ITV",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "At Motor Mecanic, we know how important it is to pass the Technical Vehicle Inspection (ITV) without setbacks. That's why we offer a full pre-MOT service to ensure your vehicle is in perfect condition before the official inspection. With our help, you can avoid unpleasant surprises and ensure that your car meets all safety and emissions requirements. We take care of taking your vehicle to the inspection center, presenting all the necessary documentation and ensuring that the process goes smoothly.",
     single: false,
     imgOne: progressBuilding,
-    imgOneAlt: "In progress building structure",
+    imgOneAlt: "",
     imgTwo: underConstruction,
-    imgTwoAlt: "Brown and gray building under construction",
-    btnExists: true,
-    btnTitle: "Read more",
+    imgTwoAlt: "",
+    btnExists: false,
+    btnTitle: "",
     btnURL: "#",
   },
 ];
@@ -115,9 +115,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <MainSection
-    title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
-    btnExists={true}
+    title="Services"
+    subTitle="These are our main services."
+    btnExists={false}
     btnTitle="Schedule a Consultation"
     btnURL="#"
   />
@@ -157,7 +157,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
       );
     })
   }
-  <!--FeaturesStats section showcases essential stats valuable to users-->
+  <!--FeaturesStats section showcases essential stats valuable to users
   <FeaturesStats
     title="By the Numbers"
     subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
@@ -178,4 +178,5 @@ const pageTitle: string = `Services | ${SITE.title}`;
       },
     ]}
   />
+    -->
 </MainLayout>

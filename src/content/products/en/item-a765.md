@@ -5,9 +5,9 @@ main:
   id: 2
   content: |
     Introducing the SF-AB A765 Assorted Screw Set – the ultimate solution for your screw fastening needs. This comprehensive set includes a wide variety of screws meticulously curated to tackle various projects with ease and precision.
-  imgCard: "@/images/product-image-2.avif"
-  imgMain: "@/images/product-image-main-2.avif"
-  imgAlt: "Mockup boxes of assorted screw set"
+  imgCard: "@/images/castrol.png"
+  imgMain: "@/images/castrol.png"
+  imgAlt: ""
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -23,7 +23,7 @@ longDescription:
   subTitle: |
     The SF-AB A765 Assorted Screw Set offers unmatched versatility and convenience, making it the perfect choice for DIY enthusiasts and professionals alike. With a comprehensive selection of screws, you'll always have the right fastener for the job.
   btnTitle: "Contact sales to learn more"
-  btnURL: "#"
+  btnURL: ""
 descriptionList:
   - title: "Wide Variety"
     subTitle: "Includes a diverse range of screw types and sizes to accommodate various applications and materials."
@@ -49,6 +49,6 @@ tableData:
       - ["Finish", "Assorted"]
       - ["Package Contents", "Various screws in a set"]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/castrol.png"
+  second: "@/images/castrol.png"
 ---
