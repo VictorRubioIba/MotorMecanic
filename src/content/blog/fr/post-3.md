@@ -6,7 +6,7 @@ role: "Directrice Marketing Stratégique"
 authorImage: "@/images/Taller_1.png"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-18
-cardImage: "@/images/blog/post-3.avif"
+cardImage: "@/images/Taller_1.png"
 cardImageAlt: "Side view worker wearing gloves"
 readTime: 3
 tags: ["approvisionnement", "abordable", "efficacité"]
