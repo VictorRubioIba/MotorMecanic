@@ -8,7 +8,7 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://github.com/VictorRubioIba",
-  base:"MotorMecanic",
+  base:"",
   image: {
     domains: ["images.unsplash.com"],
   },
@@ -30,7 +30,7 @@ export default defineConfig({
         defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
         locales: {
           en: "en", // The `defaultLocale` value must present in `locales` keys
-          fr: "fr",
+          es: "es",
         },
       },
     }),
@@ -55,6 +55,7 @@ export default defineConfig({
         "zh-cn": { label: "简体中文", lang: "zh-CN" },
       },
       // https://starlight.astro.build/guides/sidebar/
+      /*
       sidebar: [
         {
           label: "Quick Start Guides",
@@ -84,9 +85,7 @@ export default defineConfig({
           autogenerate: { directory: "advanced" },
         },
       ],
-      social: {
-        github: "https://github.com/mearashadowfax/ScrewFast",
-      },
+      */
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],
       favicon: "/favicon.ico",
@@ -101,14 +100,14 @@ export default defineConfig({
           tag: "meta",
           attrs: {
             property: "og:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "" + "/social.webp",
           },
         },
         {
           tag: "meta",
           attrs: {
             property: "twitter:image",
-            content: "https://screwfast.uk" + "/social.webp",
+            content: "" + "/social.webp",
           },
         },
       ],
