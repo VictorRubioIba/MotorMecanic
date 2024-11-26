@@ -8,7 +8,7 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://victorrubioiba.github.io/MotorMecanic/",
-  base:"",
+  base:"/",
   image: {
     domains: ["images.unsplash.com"],
   },
