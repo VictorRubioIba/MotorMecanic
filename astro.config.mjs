@@ -55,7 +55,7 @@ export default defineConfig({
         "zh-cn": { label: "简体中文", lang: "zh-CN" },
       },
       // https://starlight.astro.build/guides/sidebar/
-      /*
+      
       sidebar: [
         {
           label: "Quick Start Guides",
@@ -85,7 +85,7 @@ export default defineConfig({
           autogenerate: { directory: "advanced" },
         },
       ],
-      */
+      
       disable404Route: true,
       customCss: ["./src/assets/styles/starlight.css"],
       favicon: "/favicon.ico",
