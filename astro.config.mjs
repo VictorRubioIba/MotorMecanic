@@ -5,7 +5,7 @@ import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
 const LIVE_URL ="https://victorrubioiba.github.io"
-let BASE_URL = LIVE_URL
+//let BASE_URL = LIVE_URL
 /*
 if(isBuild) {
   BASE_URL = LIVE_URL
@@ -15,7 +15,8 @@ if(isBuild) {
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "LIVE_URL",
-  
+  base:"",
+  output: 'static',
   image: {
     domains: ["images.unsplash.com"],
   },
