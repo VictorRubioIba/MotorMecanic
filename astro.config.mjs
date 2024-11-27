@@ -6,13 +6,15 @@ import starlight from "@astrojs/starlight";
 
 const LIVE_URL ="https://victorrubioiba.github.io"
 let BASE_URL = LIVE_URL
+/*
 if(isBuild) {
   BASE_URL = LIVE_URL
 }
+*/
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "BASE_URL",
+  site: "LIVE_URL",
   
   image: {
     domains: ["images.unsplash.com"],
