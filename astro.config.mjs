@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+const isBuild = import.meta.env.PROD;
 
 const LIVE_URL ="https://victorrubioiba.github.io"
 let BASE_URL = LIVE_URL
