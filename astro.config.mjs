@@ -15,7 +15,7 @@ if(isBuild) {
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "LIVE_URL",
+  site: BASE_URL,
  
   output: 'static',
   image: {
