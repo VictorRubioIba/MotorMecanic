@@ -1,10 +1,10 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "MotorMecanic/" },
-  { name: "Products", url: "MotorMecanic/products" },
-  { name: "Services", url: "MotorMecanic/services" },
+  { name: "Home", url: "/" },
+  { name: "Products", url: "/products" },
+  { name: "Services", url: "/services" },
   //{ name: "Blog", url: "/blog" },
-  { name: "Contact", url: "MotorMecanic/contact" },
+  { name: "Contact", url: "/contact" },
 ];
 // An array of links for footer
 const footerLinks = [
@@ -12,8 +12,8 @@ const footerLinks = [
     section: "Ecosystem",
     links: [
       { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "MotorMecanic/products" },
-      { name: "Construction Services", url: "MotorMecanic/services" },
+      { name: "Tools & Equipment", url: "/products" },
+      { name: "Construction Services", url: "/services" },
     ],
   },
   {

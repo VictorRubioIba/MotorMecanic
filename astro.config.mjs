@@ -4,11 +4,16 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 
+const LIVE_URL ="https://victorrubioiba.github.io"
+let BASE_URL = LIVE_URL
+if(isBuild) {
+  BASE_URL = LIVE_URL
+}
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://victorrubioiba.github.io/MotorMecanic/",
-  base:"MotorMecanic",
+  site: "BASE_URL",
+  
   image: {
     domains: ["images.unsplash.com"],
   },
