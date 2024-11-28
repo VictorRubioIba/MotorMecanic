@@ -1,12 +1,12 @@
 
 const navBarLinks = [
-  { name: "Home", url: "/es" },
-  { name: "Productos", url: "/es/products" },
-  { name: "Servicios", url: "/es/services" },
+  { name: "Home", url: "/MotorMecanic/es" },
+  { name: "Productos", url: "/MotorMecanic/es/products" },
+  { name: "Servicios", url: "/MotorMecanic/es/services" },
   
  //{ name: "Blog", url: "/fr/blog" },
 
-  { name: "Contacto", url: "/es/contact" },
+  { name: "Contacto", url: "/MotorMecanic/es/contact" },
 ];
 
 const footerLinks = [
