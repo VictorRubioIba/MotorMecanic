@@ -49,6 +49,64 @@ import Icon from "./icons/Icon.astro";
 </script>
 
 <script>
+// Type alias for supported languages
+type TLanguage = "en" | "es";
+
+// Array of supported languages
+const languages: TLanguage[] = ["en", "es"];
+
+// Base prefix for the site
+const basePath = "MotorMecanic";
+
+document.addEventListener("DOMContentLoaded", function () {
+  const languageLinks = document.querySelectorAll(".hs-dropdown-menu a");
+
+  languageLinks.forEach((element) => {
+    const link = element as HTMLAnchorElement;
+    const lang = link
+      .getAttribute("href")
+      ?.replace("/", "")
+      .replace("/", "") as TLanguage;
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const url = new URL(window.location.href);
+      const pathParts = url.pathname
+        .split("/")
+        .filter((part) => part && part !== basePath && !languages.includes(part as TLanguage));
+
+      // Disable the selection of the same language
+      const currentLang = url.pathname.split("/")[1] === basePath
+        ? url.pathname.split("/")[2]
+        : "en";
+
+      if (lang === currentLang) return;
+
+      // Ensure the base path is the first part of the path
+      const updatedPathParts = [basePath];
+
+      // Add the selected language if it's not the default "en"
+      if (lang !== "en") {
+        updatedPathParts.push(lang);
+      }
+
+      // Add the remaining parts of the original path
+      updatedPathParts.push(...pathParts);
+
+      // Join the updated path parts with "/" and ensure no double slashes
+      const cleanPath = updatedPathParts.join("/").replace(/\/+/g, "/");
+
+      // Update the URL and redirect
+      url.pathname = cleanPath;
+      window.location.href = url.toString();
+    });
+  });
+});
+
+
+
+/*
   // Type alias for supported languages
   type TLanguage = "en" | "es";
   // array of supported languages
@@ -95,4 +153,5 @@ import Icon from "./icons/Icon.astro";
       });
     });
   });
+  */
 </script>
