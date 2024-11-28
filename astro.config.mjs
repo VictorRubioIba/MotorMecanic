@@ -13,6 +13,8 @@ const LIVE_URL ="https://victorrubioiba.github.io"
 const SCRIPT = process.env.npm_lifecycle_script || "";
 const isBuild = SCRIPT.includes("astro build");
 
+const base = "MotorMecanic"
+
 let BASE_URL = LIVE_URL
 
 if(isBuild) {
@@ -25,7 +27,7 @@ export default defineConfig({
     port: SERVER_PORT,
   },
   site: BASE_URL,
-  base: "",
+  base: base,
   output: 'static',
   image: {
     domains: ["images.unsplash.com"],
