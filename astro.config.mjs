@@ -16,7 +16,7 @@ if(isBuild) {
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: BASE_URL,
- 
+  base: "MotorMecanic",
   output: 'static',
   image: {
     domains: ["images.unsplash.com"],
