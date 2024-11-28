@@ -3,6 +3,12 @@
 const { title, subTitle } = Astro.props;
 //const { images } = Astro.props; // Las imágenes se pasarán como propiedad al componente.
 
+import castrolImage from "@images/castrol.png";
+import boshImage from "@images/bosh.png";
+import michelinImage from "@images/michelin.png";
+import mannImage from "@images/mann.png";
+import monroeImage from "@images/monroe.png";
+
 
 // Define TypeScript interface for props
 interface Props {
@@ -33,16 +39,16 @@ interface Props {
     <!-- Carousel -->
   <div class="slider">
       <div class="slides">
-        <div class="slide"><img src="public/images/bosh.png"  alt="Image 1"></div>
-        <div class="slide"><img src="public/images/castrol.png" alt="Image 2"></div>
-        <div class="slide"><img src="public/images/mann.png" alt="Image 3"></div>
-        <div class="slide"><img src="public/images/monroe.png" alt="Image 4"></div>
-        <div class="slide"><img src="public/images/michelin.png" alt="Image 5"></div>
-        <div class="slide"><img src="public/images/bosh.png"  alt="Image 6"></div>
-        <div class="slide"><img src="public/images/castrol.png" alt="Image 7"></div>
-        <div class="slide"><img src="public/images/mann.png" alt="Image 8"></div>
-        <div class="slide"><img src="public/images/monroe.png" alt="Image 9"></div>
-        <div class="slide"><img src="public/images/michelin.png" alt="Image 10"></div>
+        <div class="slide"><img src={boshImage.src}  alt="Image 1"></div>
+        <div class="slide"><img src={castrolImage.src}  alt="Image 2"></div>
+        <div class="slide"><img src={mannImage.src}  alt="Image 3"></div>
+        <div class="slide"><img src={michelinImage.src}  alt="Image 4"></div>
+        <div class="slide"><img src={monroeImage.src}  alt="Image 5"></div>
+        <div class="slide"><img src={boshImage.src}   alt="Image 6"></div>
+        <div class="slide"><img src={castrolImage.src}  alt="Image 7"></div>
+        <div class="slide"><img src={mannImage.src}  alt="Image 8"></div>
+        <div class="slide"><img src={michelinImage.src}  alt="Image 9"></div>
+        <div class="slide"><img src={monroeImage.src}  alt="Image 10"></div>
       </div>
   </div>
   </div>
