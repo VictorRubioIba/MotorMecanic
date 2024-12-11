@@ -1,5 +1,5 @@
 ---
-import { languages } from "@utils//ui";
+import { languages } from "@utils/ui";
 import Icon from "./icons/Icon.astro";
 ---
 
@@ -33,7 +33,7 @@ import Icon from "./icons/Icon.astro";
       Object.entries(languages).map(([lang, label]) => (
         <a
           class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-neutral-800 hover:bg-neutral-100 focus:bg-neutral-100 focus:outline-none dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
-          href={`/${lang === "en" ? "" : lang}`}
+          href={`/${lang === "es" ? "" : lang}`}
         >
           {label}
         </a>
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Disable the selection of the same language
       const currentLang = url.pathname.split("/")[1] === basePath
         ? url.pathname.split("/")[2]
-        : "en";
+        : "es";
 
       if (lang === currentLang) return;
 
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const updatedPathParts = [basePath];
 
       // Add the selected language if it's not the default "en"
-      if (lang !== "en") {
+      if (lang !== "es") {
         updatedPathParts.push(lang);
       }
 

@@ -443,7 +443,7 @@ For those who prefer custom-styled scrollbars, we suggest using the [tailwind-sc
 Additionally, update the `<html>` tag to remove the `scrollbar-hide` class, resulting in:
 
 ```html
-<html lang="en" class="scroll-pt-16">
+<html lang="es" class="scroll-pt-16">
 ```
 
 ### SEO Configuration

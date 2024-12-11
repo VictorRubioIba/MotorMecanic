@@ -1,0 +1,147 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import HeroSection from "@components/sections/landing/HeroSection.astro";
+import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
+import ClientsSection from "@components/sections/landing/ClientsSection.astro";
+import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
+import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
+import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
+import PricingSection from "@components/sections/pricing/PricingSection.astro";
+import FAQ from "@components/sections/misc/FAQ.astro";
+import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
+import heroImage from "@images/logosinfondo.png";
+import faqs from "@data/faqs.json";
+import features from "@data/features.json";
+import pricing from "@data/pricing.json";
+import featureImage from "@images/Taller_3.png";
+import construction from "@images/Taller_16.png";
+import tools from "@images/Taller_1.png";
+import dashboard from "@images/Taller_9.png";
+
+
+const avatarSrcs: Array<string> = [
+  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
+  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+];
+---
+
+<MainLayout>
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Contact us"
+    url="/contact"
+  />
+
+  <HeroSection
+    title=`Mechanical workshop <span
+        class="text-yellow-500 dark:text-yellow-400">MotorMecanic</span>`
+    subTitle="Workshop specialized in general mechanics, with more than 30 years of experience. Welcome to your mechanical workshop in Pamplona. We have the best services for your vehicle."
+    primaryBtn="Start Exploring"
+    primaryBtnURL="/products"
+    secondaryBtn="Contact Us"
+    secondaryBtnURL="/contact"
+    withReview={true}
+    avatars={avatarSrcs}
+    rating=`<span class="font-bold">4.8</span> / 5`
+    starCount={4}
+    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    src={heroImage}
+    alt="Mechanical workshop"
+  />
+
+  <ClientsSection
+    title="We work with the best brands in the world"
+    subTitle=""
+  />
+
+  <FeaturesGeneral
+    title="We meet the needs of mechanical workshops"
+    subTitle="At Motormecanic, we understand the specific challenges facing the automotive mechanics sector. From specialized high-performance tools to expert technical advice, we are dedicated to helping your shop overcome any obstacle and achieve its goals with efficiency and precision."
+    src={featureImage}
+    alt="ScrewFast products in floating boxes"
+    features={features}
+  />
+
+  <FeaturesNavs
+    title=`We meet the needs of <span class="text-yellow-500 dark:text-yellow-400">
+mechanical workshops</span>.`
+    tabs={[
+      {
+        heading: "General mechanics",
+        content:
+          "En Motor Mecanic, somos expertos en ofrecer soluciones completas para todas tus necesidades de mecánica en general. Nuestro equipo de técnicos altamente capacitados está comprometido con el servicio de calidad, brindando atención personalizada y soluciones a medida para que tu vehículo siempre funcione a la perfección. Ya sea que necesites un simple cambio de aceite o una reparación mayor, en Motor Mecanic estamos aquí para ayudarte.",
+        svg: "tools",
+        src: tools,
+        alt: "",
+        first: true,
+      },
+      {
+        heading: "Maintenance",
+        content:
+          "Keeping your vehicle in perfect condition is essential for your safety and the longevity of your car. At Motor Mecanic, we offer maintenance services designed to keep your vehicle always in its best shape, regardless of its age or make.",
+        svg: "dashboard",
+        src: dashboard,
+        alt: "",
+        second: true,
+      },
+      {
+        heading: "Tire Changes",
+        content:
+          "Tires are one of the most important components for the safety and performance of your vehicle. At Motor Mecanic, we know that choosing the right tire and ensuring it is installed correctly is crucial to your peace of mind on the road. We offer complete tire changing services.",
+        svg: "house",
+        src: construction,
+        alt: "",
+      },
+    ]}
+  />
+
+  <TestimonialsSection
+    title="Repair your vehicle safely"
+    subTitle="At Motor Mecanic, we understand the importance of keeping your vehicle in perfect condition for its safety and performance. From there we have some comments from our clients:"
+    ;
+    testimonials={[
+      {
+        content:
+          "I have been taking the car for electrical issues for two years and my father for about ten years. They have always proven to be transparent, effective, professional and honest. We have never had any surprises, which is saying something in favor of a workshop.",
+        author: "Martín Ruiz",
+        role: "",
+        avatarSrc:
+          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      },
+    ]}
+    statistics={[
+      {
+        count: "Siscu Simon",
+        description:
+          "David a crack. Trustworthy mechanic and better person. Always sincere with everything he does and proposes. You can rest assured if you take your car there",
+      },
+      {
+        count: "Isidro 31",
+        description:
+          "One of the best workshops in Pamplona, ​​great treatment from David and his team, great professionals, they always have a solution to our mechanical, electrical, etc. problems. I have been driving my vehicles and those of my family and friends for many years and everyone is delighted.",
+      },
+      {
+        count: "Ruben Ruiz",
+        description:
+          "I've had my cars there for years and they have always been fast and trouble-free. It's a pleasure to see how they work, honest and transparent, looking out for the client.",
+      },
+      {
+        count: "Borja Celaya",
+        description: "I took the car in to do a fairly important mechanical repair and the truth is that I was delighted. It is obvious that they know what they are talking about and know a lot about mechanics. Very careful. Highly recommended.",
+      },
+    ]}
+  />
+
+  <PricingSection pricing={pricing} />
+
+  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+
+  <HeroSectionAlt
+    title="Contact Us"
+    subTitle="For any questions, suggestions or collaboration, do not hesitate to contact us."
+    url="contact"
+  />
+</MainLayout>

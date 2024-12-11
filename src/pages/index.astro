@@ -11,14 +11,14 @@ import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/logosinfondo.png";
-import faqs from "@data/faqs.json";
-import features from "@data/features.json";
-import pricing from "@data/pricing.json";
+import faqs from "@data/es/faqs.json";
+import features from "@data/es/features.json";
+import pricing from "@data/es/pricing.json";
 import featureImage from "@images/Taller_3.png";
 import construction from "@images/Taller_16.png";
 import tools from "@images/Taller_1.png";
 import dashboard from "@images/Taller_9.png";
-
+import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -28,69 +28,67 @@ const avatarSrcs: Array<string> = [
 ];
 ---
 
-<MainLayout>
+<MainLayout lang="fr">
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Contact us"
+    btnTitle="Contacta con nosotros"
     url="/contact"
   />
 
   <HeroSection
-    title=`Mechanical workshop <span
-        class="text-yellow-500 dark:text-yellow-400">MotorMecanic</span>`
-    subTitle="Workshop specialized in general mechanics, with more than 30 years of experience. Welcome to your mechanical workshop in Pamplona. We have the best services for your vehicle."
-    primaryBtn="Start Exploring"
-    primaryBtnURL="/products"
-    secondaryBtn="Contact Us"
-    secondaryBtnURL="/contact"
+    title=`Taller mecánico <span class="text-yellow-500 dark:text-yellow-400">Motormecanic</span>`
+    subTitle="Taller especializado en mecanica en general, con mas de 30 años de experiencia. Bienvenido a tu taller mecánico en Pamplona. Contamos con los mejores servicios para tu vehículo."
+    primaryBtn="Comienza a explorar"
+    primaryBtnURL={getRelativeLocaleUrl("es", "products")}
+    secondaryBtn="Contacta con nosotros"
+    secondaryBtnURL={getRelativeLocaleUrl("es", "contact")}
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    
     src={heroImage}
-    alt="Mechanical workshop"
+    alt="Taller mecánico"
   />
 
   <ClientsSection
-    title="We work with the best brands in the world"
+    title="Trabajamos con las mejores marcas en el mundo"
     subTitle=""
   />
 
   <FeaturesGeneral
-    title="We meet the needs of mechanical workshops"
-    subTitle="At Motormecanic, we understand the specific challenges facing the automotive mechanics sector. From specialized high-performance tools to expert technical advice, we are dedicated to helping your shop overcome any obstacle and achieve its goals with efficiency and precision."
+    title="Cumplimos con las necesidades de los talleres mecánicos"
+    subTitle="En Motormecanic, entendemos los desafíos específicos que enfrenta el sector de la mecánica automotriz. Desde herramientas especializadas de alto rendimiento hasta asesoramiento técnico experto, estamos dedicados a ayudar a su taller a superar cualquier obstáculo y alcanzar sus metas con eficiencia y precisión."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
+    alt="Produits ScrewFast dans des boîtes flottantes"
     features={features}
   />
 
   <FeaturesNavs
-    title=`We meet the needs of <span class="text-yellow-500 dark:text-yellow-400">
-mechanical workshops</span>.`
+    title=`Cumplimos con las necesidades de los  <span class="text-yellow-500 dark:text-yellow-400">talleres mecánicos</span> .`
     tabs={[
       {
-        heading: "General mechanics",
+        heading: "Mecánica en general",
         content:
-          "En Motor Mecanic, somos expertos en ofrecer soluciones completas para todas tus necesidades de mecánica en general. Nuestro equipo de técnicos altamente capacitados está comprometido con el servicio de calidad, brindando atención personalizada y soluciones a medida para que tu vehículo siempre funcione a la perfección. Ya sea que necesites un simple cambio de aceite o una reparación mayor, en Motor Mecanic estamos aquí para ayudarte.",
+          "En Motor Mecanic, somos expertos en ofrecer soluciones completas para todas tus necesidades de mecánica en general. Nuestro equipo de técnicos altamente capacitados está comprometido con el servicio de calidad, brindando atención personalizada y soluciones a medida para que tu vehículo siempre funcione a la perfección. Ya sea que necesites un simple cambio de aceite o una reparación mayor, en Motor Mecanic estamos aquí para ayudarte",
         svg: "tools",
         src: tools,
         alt: "",
         first: true,
       },
       {
-        heading: "Maintenance",
+        heading: "Mantenimientos",
         content:
-          "Keeping your vehicle in perfect condition is essential for your safety and the longevity of your car. At Motor Mecanic, we offer maintenance services designed to keep your vehicle always in its best shape, regardless of its age or make.",
+          "Mantener tu vehículo en perfectas condiciones es esencial para tu seguridad y la longevidad de tu coche. En Motor Mecanic, ofrecemos servicios de mantenimiento diseñados para que tu vehículo siempre esté en su mejor forma, sin importar su antigüedad o marca.",
         svg: "dashboard",
         src: dashboard,
         alt: "",
         second: true,
       },
       {
-        heading: "Tire Changes",
+        heading: "Cambios de Neumáticos",
         content:
-          "Tires are one of the most important components for the safety and performance of your vehicle. At Motor Mecanic, we know that choosing the right tire and ensuring it is installed correctly is crucial to your peace of mind on the road. We offer complete tire changing services.",
+          "Los neumáticos son uno de los componentes más importantes para la seguridad y el rendimiento de tu vehículo. En Motor Mecanic, sabemos que elegir el neumático adecuado y asegurarse de que esté instalado correctamente es crucial para tu tranquilidad en la carretera.Ofrecemos servicios completos de cambio de neumáticos.",
         svg: "house",
         src: construction,
         alt: "",
@@ -99,49 +97,50 @@ mechanical workshops</span>.`
   />
 
   <TestimonialsSection
-    title="Repair your vehicle safely"
-    subTitle="At Motor Mecanic, we understand the importance of keeping your vehicle in perfect condition for its safety and performance. From there we have some comments from our clients:"
-    ;
+    title="Repara tu vehículo con seguridad"
+    subTitle="En Motor Mecanic, entendemos la importancia de mantener tu vehículo en perfectas condiciones para su seguridad y rendimiento. De ahí tenemos unos comentarios de nuestros clientes:"
     testimonials={[
       {
         content:
-          "I have been taking the car for electrical issues for two years and my father for about ten years. They have always proven to be transparent, effective, professional and honest. We have never had any surprises, which is saying something in favor of a workshop.",
+          " Llevo dos años llevando el coche ante temas de electricidad y mi padre unos diez años. Siempre han demostrado ser transparentes, eficaces, profesionales y honestos. Nunca nos hemos llevado ninguna sorpresa, lo cual es bastante decir en favor de un taller",
         author: "Martín Ruiz",
         role: "",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+        avatarSrc: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+          
       },
+      
     ]}
     statistics={[
       {
         count: "Siscu Simon",
         description:
-          "David a crack. Trustworthy mechanic and better person. Always sincere with everything he does and proposes. You can rest assured if you take your car there",
+          "David un crack. Mecánico de confianza y mejor persona. Siempre sincero con todo lo que hace y propone. Puedes estar tranquilo si llevas tu coche allá",
       },
       {
         count: "Isidro 31",
         description:
-          "One of the best workshops in Pamplona, ​​great treatment from David and his team, great professionals, they always have a solution to our mechanical, electrical, etc. problems. I have been driving my vehicles and those of my family and friends for many years and everyone is delighted.",
+          "De los mejores talleres de Pamplona, trato estupendo por parte de David y su equipo, grandes profesionales, siempre tienen una solución a nuestros problemas mecanicos, electricos etc. .Son muchs años llevando mis vehículos y los de mis familiares y amigos y todos encantados.",
       },
       {
         count: "Ruben Ruiz",
         description:
-          "I've had my cars there for years and they have always been fast and trouble-free. It's a pleasure to see how they work, honest and transparent, looking out for the client.",
+          "Llevo mis coches allí desde hace años y siempre han sido rápidos y sin problemas. Da gusto ver cómo trabajan, honestos y transparentes , mirando por el cliente.",
       },
       {
         count: "Borja Celaya",
-        description: "I took the car in to do a fairly important mechanical repair and the truth is that I was delighted. It is obvious that they know what they are talking about and know a lot about mechanics. Very careful. Highly recommended.",
+        description:
+          "Lleve el coche para hacer una reparación mecánica bastante importante y la verdad que he quedado encantado. Se nota que saben de lo que hablan y saben mucho de mecánica. Muy cuidadosos.Muy recomendable",
       },
     ]}
   />
 
   <PricingSection pricing={pricing} />
 
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+  <FAQ title="Questions<br />fréquemment posées" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Contact Us"
-    subTitle="For any questions, suggestions or collaboration, do not hesitate to contact us."
+    title="Contacta con Nosotros"
+    subTitle="Para cualquier consulta, sugerencia o colaboración, no dudes en contactarnos."
     url="contact"
   />
 </MainLayout>

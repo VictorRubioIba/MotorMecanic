@@ -1,38 +1,40 @@
-// An array of links for navigation bar
+
 const navBarLinks = [
   { name: "Home", url: "/MotorMecanic/" },
-  { name: "Products", url: "/MotorMecanic/products" },
-  { name: "Services", url: "/MotorMecanic/services" },
-  //{ name: "Blog", url: "/blog" },
-  { name: "Contact", url: "/MotorMecanic/contact" },
+  { name: "Productos", url: "/MotorMecanic/products" },
+  { name: "Servicios", url: "/MotorMecanic/services" },
+  
+ //{ name: "Blog", url: "/fr/blog" },
+
+  { name: "Contacto", url: "/MotorMecanic/contact" },
 ];
-// An array of links for footer
+
 const footerLinks = [
   {
-    section: "Ecosystem",
+    section: "Ecosistema",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
-      { name: "Tools & Equipment", url: "/products" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Documentación", url: "/fr/welcome-to-docs/" },
+      { name: "Nuestros Equipamentos", url: "/fr/products" },
+      { name: "Servicios de Construcción", url: "/fr/services" },
     ],
   },
   {
-    section: "Company",
+    section: "Sociedad",
     links: [
-      { name: "About us", url: "#" },
-      { name: "Blog", url: "/blog" },
-      { name: "Careers", url: "#" },
-      { name: "Customers", url: "#" },
+      { name: "A proposito de nosotros", url: "#" },
+      { name: "Blog", url: "/fr/blog" },
+      { name: "Carreras", url: "#" },
+      { name: "Clientes", url: "#" },
     ],
   },
 ];
-// An object of links for social icons
+
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
-  x: "https://twitter.com/",
+  facebook: "#",
+  x: "#",
   github: "https://github.com/mearashadowfax/ScrewFast",
-  google: "https://www.google.com/",
-  slack: "https://slack.com/",
+  google: "#",
+  slack: "#",
 };
 
 export default {

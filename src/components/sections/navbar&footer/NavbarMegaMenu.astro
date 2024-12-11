@@ -4,16 +4,16 @@ import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
 import MegaMenuLink from "@components/ui/links/MegaMenuLink.astro";
 import Authentication from "../misc/Authentication.astro";
-import enStrings from "@utils/navigation.ts";
-import esStrings from "@utils/es/navigation.ts";
+import enStrings from "@utils/en/navigation.ts";
+import esStrings from "@utils/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
 import LanguagePicker from "@components/ui/LanguagePicker.astro";
 import LoginModal from "@/components/ui/forms/LoginModal.astro";
 import logo from "@images/logosinfondo.png";
 
 // Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "en" ? enStrings : esStrings;
-const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
+const strings = Astro.currentLocale === "fr" ? esStrings : enStrings;
+const homeUrl = Astro.currentLocale === "fr" ? "/" : "/en";
 ---
 
 <!-- Main header component -->
@@ -113,6 +113,8 @@ const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
 </header>
 <!-- Theme Appearance script to manage light/dark modes -->
 <script is:inline>
+console.log("Idioma de la página: es ", document.documentElement.lang);
+
   const HSThemeAppearance = {
     init() {
       const defaultTheme = "default";

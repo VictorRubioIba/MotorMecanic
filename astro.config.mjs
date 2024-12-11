@@ -47,9 +47,9 @@ export default defineConfig({
     tailwind(),
     sitemap({
       i18n: {
-        defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+        defaultLocale: "es", 
         locales: {
-          en: "en", // The `defaultLocale` value must present in `locales` keys
+          en: "en", 
           es: "es",
         },
       },
@@ -64,11 +64,11 @@ export default defineConfig({
       // If both an Astro and Starlight i18n configurations are provided, an error is thrown.
       locales: {
         root: {
-          label: "English",
-          lang: "en",
+          label: "Spanish",
+          lang: "es",
         },
         de: { label: "Deutsch", lang: "de" },
-        es: { label: "Español", lang: "es" },
+        es: { label: "English", lang: "en" },
         fa: { label: "Persian", lang: "fa", dir: "rtl" },
         fr: { label: "Français", lang: "fr" },
         ja: { label: "日本語", lang: "ja" },

@@ -3,8 +3,8 @@
 import ThemeIcon from "@components/ThemeIcon.astro";
 import NavLink from "@components/ui/links/NavLink.astro";
 import Authentication from "../misc/Authentication.astro";
-import enStrings from "@utils/navigation.ts";
-import esStrings from "@utils/es/navigation.ts";
+import enStrings from "@utils/en/navigation.ts";
+import esStrings from "@utils/navigation.ts";
 import logo from "@images/logosinfondo.png";
 
 
@@ -12,8 +12,8 @@ import BrandLogo from "@components/BrandLogo.astro";
 import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 // Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "en" ? enStrings : esStrings;
-const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
+const strings = Astro.currentLocale === "es" ? esStrings : enStrings;
+const homeUrl = Astro.currentLocale === "es" ? "/" : "/en";
 ---
 
 <!-- Main header component -->
@@ -107,6 +107,8 @@ const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
 </header>
 <!-- Theme Appearance script to manage light/dark modes -->
 <script is:inline>
+  console.log("Idioma de la página: es ", document.documentElement.lang);
+
   const HSThemeAppearance = {
     init() {
       const defaultTheme = "default";
@@ -194,6 +196,7 @@ const homeUrl = Astro.currentLocale === "es" ? "/es" : "/";
         ),
       );
     });
+   
 
     $switchableThemes.forEach(($item) => {
       $item.addEventListener("change", (e) => {
