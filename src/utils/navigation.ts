@@ -1,6 +1,6 @@
 
 const navBarLinks = [
-  { name: "Home", url: "/MotorMecanic/" },
+  { name: "Inicio", url: "/MotorMecanic/" },
   { name: "Productos", url: "/MotorMecanic/products" },
   { name: "Servicios", url: "/MotorMecanic/services" },
   
@@ -11,9 +11,9 @@ const navBarLinks = [
 
 const footerLinks = [
   {
-    section: "Ecosistema",
+    section: "Dirección",
     links: [
-      { name: "Documentación", url: "/fr/welcome-to-docs/" },
+      { name: "Documentación", url: "" },
       { name: "Nuestros Equipamentos", url: "/fr/products" },
       { name: "Servicios de Construcción", url: "/fr/services" },
     ],
@@ -21,10 +21,10 @@ const footerLinks = [
   {
     section: "Sociedad",
     links: [
-      { name: "A proposito de nosotros", url: "#" },
-      { name: "Blog", url: "/fr/blog" },
-      { name: "Carreras", url: "#" },
-      { name: "Clientes", url: "#" },
+      { name: "A proposito de nosotros", url: "" },
+      { name: "Blog", url: "" },
+      { name: "Carreras", url: "" },
+      { name: "Clientes", url: "" },
     ],
   },
 ];
@@ -32,7 +32,7 @@ const footerLinks = [
 const socialLinks = {
   facebook: "#",
   x: "#",
-  github: "https://github.com/mearashadowfax/ScrewFast",
+  github: "",
   google: "#",
   slack: "#",
 };
