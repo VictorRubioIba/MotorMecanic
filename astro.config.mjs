@@ -28,7 +28,7 @@ export default defineConfig({
   },
   site: BASE_URL,
   base: base,
-  output: 'server',
+  output: 'static',
   image: {
     domains: ["images.unsplash.com"],
   },

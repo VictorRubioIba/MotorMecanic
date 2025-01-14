@@ -1,5 +1,5 @@
-import nodemailer from "nodemailer";
-
+//import nodemailer from "nodemailer";
+/*
 const transporter = nodemailer.createTransport({
     service:"gmail",
     host: import.meta.env.MAIL_HOST,
@@ -28,5 +28,5 @@ const transporter = nodemailer.createTransport({
   
   }
 
-  export default sendMailAsync;
-  
+export default sendMailAsync;
+  */

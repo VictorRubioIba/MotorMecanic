@@ -7,6 +7,8 @@ import EmailContactInput from "@components/ui/forms/input/EmailContactInput.astr
 import PhoneInput from "@components/ui/forms/input/PhoneInput.astro";
 import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
+import { isValidEmail } from "@utils/validateContactForm";
+//import  sendMailAsync  from "@utils/sendMail";
 
 // Define the variables that will be used in this component
 const title: string = "Contacto";
@@ -15,6 +17,46 @@ const subTitle: string =
 const formTitle: string = "Rellena el fomulario";
 const formSubTitle: string =
   "Le responderemos lo antes posible.";
+const errors = { username: "",surname:"", email: "", message: "", policy: "" };
+if (Astro.request.method === "POST") {
+  try {
+  console.log("request");
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const surname = data.get("surname");
+    const email = data.get("email");
+    const message = data.get("message");
+    const policy = data.get("policy");
+
+    if (!policy) {
+      errors.policy += "Please accept the privacy policy. ";
+    }
+    if (typeof name !== "string" || name.length < 1) {
+      errors.username += "Please enter a username.";
+    }
+    if (typeof surname !== "string" ||surname.length < 1) {
+      errors.username += "Please enter a username.";
+    }
+    if (typeof message !== "string" || message.length < 1) {
+      errors.message += "Please enter a message.";
+    }
+    if (typeof email !== "string" || !isValidEmail(email)) {
+      errors.email += "Email is not valid.";
+    }
+
+    const hasErrors = Object.values(errors).some((msg) => msg);
+    if (!hasErrors) {
+
+      //AQUI MANDO EL MSG
+
+      //await sendMailAsync(email,name,message);
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
 
 <!-- Contact Us -->
@@ -44,21 +86,28 @@ const formSubTitle: string =
           <div class="grid gap-4">
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <TextInput
+                id="name"
                 id="hs-firstname-contacts"
                 label="Nombre"
                 name="hs-firstname-contacts"
+                
               />
               <TextInput
+                id="surname"
                 id="hs-lastname-contacts"
-                label="Apellido"
+                label="Apellidos"
                 name="hs-firstname-contacts"
               />
             </div>
-            <EmailContactInput id="hs-email-contacts" />
+            <EmailContactInput
+             id="email"
+             id="hs-email-contacts" 
+             label="Email"
+             />
             <PhoneInput id="hs-phone-number" />
             <TextAreaInput
-              id="hs-about-contacts"
-              label="Detalles"
+              id="message"
+              label="Mensaje"
               name="hs-about-contacts"
             />
           </div>
